@@ -1,0 +1,624 @@
+/* =========================================
+   GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7fbff;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    padding: 18px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: white;
+
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: bold;
+    color: #1261a0;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 28px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #374151;
+    font-weight: 500;
+}
+
+.navbar nav a:hover {
+    color: #1261a0;
+}
+
+.login-btn {
+    border: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+
+    background: #1261a0;
+    color: white;
+
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: #0b4778;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 650px;
+
+    padding: 80px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: linear-gradient(
+        135deg,
+        #eaf6ff,
+        #f7fcff
+    );
+
+    gap: 60px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.welcome {
+    color: #1261a0;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #1261a0;
+}
+
+.hero-text {
+    font-size: 18px;
+    color: #5b6470;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-buttons button {
+    border: none;
+
+    padding: 14px 25px;
+
+    border-radius: 8px;
+
+    background: #1261a0;
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.hero-buttons button:hover {
+    background: #0b4778;
+}
+
+.hero-buttons .secondary {
+    background: white;
+    color: #1261a0;
+    border: 2px solid #1261a0;
+}
+
+
+/* =========================================
+   HERO CARD
+========================================= */
+
+.hero-card {
+    width: 340px;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.10);
+}
+
+.hospital-icon {
+    font-size: 75px;
+    margin-bottom: 20px;
+}
+
+.hero-card h2 {
+    color: #1261a0;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.hero-card p {
+    color: #6b7280;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.section {
+    padding: 90px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title p {
+    color: #1261a0;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    margin-top: 8px;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-container {
+    display: flex;
+    gap: 50px;
+    align-items: stretch;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-text h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #5f6874;
+    margin-bottom: 15px;
+}
+
+.about-box {
+    flex: 1;
+
+    padding: 40px;
+
+    background: #eaf6ff;
+
+    border-radius: 20px;
+
+    text-align: center;
+}
+
+.about-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.about-box h3 {
+    color: #1261a0;
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   SERVICE CARDS
+========================================= */
+
+.services-section {
+    background: #f1f8fd;
+}
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.card {
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+.card ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.card li {
+    margin: 9px 0;
+}
+
+.card button,
+.doctor-profile button,
+.form-box button {
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 7px;
+
+    background: #1261a0;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+.card button:hover,
+.doctor-profile button:hover,
+.form-box button:hover {
+    background: #0b4778;
+}
+
+
+/* =========================================
+   DOCTORS
+========================================= */
+
+.doctor-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.doctor-profile {
+    padding: 30px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.doctor-image {
+    width: 100px;
+    height: 100px;
+
+    margin: auto;
+    margin-bottom: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eaf6ff;
+
+    font-size: 55px;
+}
+
+.doctor-profile h3 {
+    font-size: 22px;
+}
+
+.doctor-profile p {
+    color: #1261a0;
+    font-weight: bold;
+}
+
+.doctor-profile span {
+    display: block;
+    margin-bottom: 20px;
+    color: #777;
+}
+
+
+/* =========================================
+   FORMS
+========================================= */
+
+.form-section {
+    padding: 70px 20px;
+
+    background: #eef8ff;
+
+    display: flex;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.form-box {
+    width: 500px;
+
+    padding: 40px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.10);
+}
+
+.form-box h2 {
+    color: #1261a0;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.form-box > p {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.form-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-box label {
+    margin-top: 15px;
+    margin-bottom: 6px;
+
+    font-weight: bold;
+}
+
+.form-box input,
+.form-box textarea,
+.form-box select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.form-box textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.form-box form button {
+    margin-top: 25px;
+}
+
+.close-btn {
+    margin-top: 15px;
+
+    background: #6b7280 !important;
+}
+
+.close-btn:hover {
+    background: #4b5563 !important;
+}
+
+
+/* =========================================
+   LOGIN OPTIONS
+========================================= */
+
+.login-options {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.login-options button {
+    width: 100%;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-section {
+    padding: 60px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #1261a0;
+
+    color: white;
+}
+
+.contact-section h2 {
+    font-size: 30px;
+}
+
+.contact-details {
+    line-height: 2;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background: #092f4f;
+
+    color: white;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .doctor-list {
+        grid-template-columns: 1fr;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-card {
+        width: 100%;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .form-box {
+        width: 100%;
+        padding: 25px;
+    }
+}

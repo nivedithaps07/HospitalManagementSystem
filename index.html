@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hospital Appointment & Patient Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="script.js"></script>
+<body>
+
+    <!-- ================= NAVIGATION BAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            🏥 City Care Hospital
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#doctors">Doctors</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="login-btn" onclick="showLogin()">
+            Login
+        </button>
+
+    </header>
+
+
+    <!-- ================= HOME SECTION ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="welcome">
+                WELCOME TO CITY CARE HOSPITAL
+            </p>
+
+            <h1>
+                Hospital Appointment &
+                <span>Patient Management System</span>
+            </h1>
+
+            <p class="hero-text">
+                A simple and efficient system for managing
+                patients, doctors, appointments and medical records.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button onclick="showPatientRegistration()">
+                    Register as Patient
+                </button>
+
+                <button class="secondary"
+                        onclick="showLogin()">
+                    Login
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="hero-card">
+
+            <div class="hospital-icon">
+                🏥
+            </div>
+
+            <h2>
+                Your Health,
+                <br>
+                Our Priority
+            </h2>
+
+            <p>
+                Manage your hospital appointments
+                easily and efficiently.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT SECTION ================= -->
+
+    <section id="about" class="section">
+
+        <div class="section-title">
+
+            <p>ABOUT THE SYSTEM</p>
+
+            <h2>
+                Smart Hospital Management
+            </h2>
+
+        </div>
+
+        <div class="about-container">
+
+            <div class="about-text">
+
+                <h3>
+                    Making Hospital Management Easier
+                </h3>
+
+                <p>
+                    The Hospital Appointment and Patient
+                    Management System is designed to digitize
+                    important hospital activities.
+                </p>
+
+                <p>
+                    Patients can register, check doctors,
+                    book appointments, reschedule or cancel
+                    appointments and view their medical records.
+                </p>
+
+                <p>
+                    Doctors can view appointments and patient
+                    information and manage medical records.
+                </p>
+
+                <p>
+                    Administrators can manage patients,
+                    doctors and appointments and generate
+                    hospital reports.
+                </p>
+
+            </div>
+
+            <div class="about-box">
+
+                <div class="about-icon">💙</div>
+
+                <h3>
+                    Efficient & Organized
+                </h3>
+
+                <p>
+                    Reduce paperwork and make hospital
+                    operations easier to manage.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section id="services" class="section services-section">
+
+        <div class="section-title">
+
+            <p>OUR FEATURES</p>
+
+            <h2>
+                What Can You Do?
+            </h2>
+
+        </div>
+
+
+        <div class="cards">
+
+
+            <!-- Patient -->
+
+            <div class="card patient-card">
+
+                <div class="card-icon">
+                    👤
+                </div>
+
+                <h3>
+                    Patient
+                </h3>
+
+                <p>
+                    Manage your appointments and
+                    medical information.
+                </p>
+
+                <ul>
+                    <li>✓ Register</li>
+                    <li>✓ Login</li>
+                    <li>✓ Book Appointment</li>
+                    <li>✓ Reschedule Appointment</li>
+                    <li>✓ Cancel Appointment</li>
+                    <li>✓ View Medical Record</li>
+                </ul>
+
+                <button onclick="showPatientRegistration()">
+                    Patient Registration
+                </button>
+
+            </div>
+
+
+            <!-- Doctor -->
+
+            <div class="card doctor-card">
+
+                <div class="card-icon">
+                    👨‍⚕️
+                </div>
+
+                <h3>
+                    Doctor
+                </h3>
+
+                <p>
+                    Manage appointments and
+                    patient medical records.
+                </p>
+
+                <ul>
+                    <li>✓ Login</li>
+                    <li>✓ View Appointments</li>
+                    <li>✓ View Patient Information</li>
+                    <li>✓ Manage Medical Records</li>
+                    <li>✓ Update Medical Record</li>
+                </ul>
+
+                <button onclick="showDoctorLogin()">
+                    Doctor Login
+                </button>
+
+            </div>
+
+
+            <!-- Administrator -->
+
+            <div class="card admin-card">
+
+                <div class="card-icon">
+                    👨‍💼
+                </div>
+
+                <h3>
+                    Administrator
+                </h3>
+
+                <p>
+                    Manage hospital activities
+                    and generate reports.
+                </p>
+
+                <ul>
+                    <li>✓ Login</li>
+                    <li>✓ Manage Patients</li>
+                    <li>✓ Manage Doctors</li>
+                    <li>✓ Manage Appointments</li>
+                    <li>✓ Monitor Activities</li>
+                    <li>✓ View Reports</li>
+                </ul>
+
+                <button onclick="showAdminLogin()">
+                    Administrator Login
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DOCTORS ================= -->
+
+    <section id="doctors" class="section">
+
+        <div class="section-title">
+
+            <p>OUR MEDICAL TEAM</p>
+
+            <h2>
+                Available Doctors
+            </h2>
+
+        </div>
+
+
+        <div class="doctor-list">
+
+
+            <div class="doctor-profile">
+
+                <div class="doctor-image">
+                    👨‍⚕️
+                </div>
+
+                <h3>
+                    Dr. Arun Kumar
+                </h3>
+
+                <p>
+                    Cardiologist
+                </p>
+
+                <span>
+                    Cardiology
+                </span>
+
+                <button onclick="bookAppointment()">
+                    Book Appointment
+                </button>
+
+            </div>
+
+
+            <div class="doctor-profile">
+
+                <div class="doctor-image">
+                    👩‍⚕️
+                </div>
+
+                <h3>
+                    Dr. Meera Nair
+                </h3>
+
+                <p>
+                    Dermatologist
+                </p>
+
+                <span>
+                    Dermatology
+                </span>
+
+                <button onclick="bookAppointment()">
+                    Book Appointment
+                </button>
+
+            </div>
+
+
+            <div class="doctor-profile">
+
+                <div class="doctor-image">
+                    👨‍⚕️
+                </div>
+
+                <h3>
+                    Dr. Rahul Menon
+                </h3>
+
+                <p>
+                    General Physician
+                </p>
+
+                <span>
+                    General Medicine
+                </span>
+
+                <button onclick="bookAppointment()">
+                    Book Appointment
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PATIENT REGISTRATION ================= -->
+
+    <section id="registration" class="form-section hidden">
+
+        <div class="form-box">
+
+            <h2>
+                Patient Registration
+            </h2>
+
+            <p>
+                Create your patient account
+            </p>
+
+            <form onsubmit="registerPatient(event)">
+
+                <label>
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="Enter your name"
+                    required
+                >
+
+
+                <label>
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    placeholder="Enter phone number"
+                    required
+                >
+
+
+                <label>
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    placeholder="Enter email"
+                    required
+                >
+
+
+                <label>
+                    Disease / Health Problem
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="Enter disease or health problem"
+                >
+
+
+                <label>
+                    Address
+                </label>
+
+                <textarea
+                    placeholder="Enter address">
+                </textarea>
+
+
+                <label>
+                    Blood Group
+                </label>
+
+                <select>
+
+                    <option>Select Blood Group</option>
+                    <option>A+</option>
+                    <option>A-</option>
+                    <option>B+</option>
+                    <option>B-</option>
+                    <option>O+</option>
+                    <option>O-</option>
+                    <option>AB+</option>
+                    <option>AB-</option>
+
+                </select>
+
+
+                <label>
+                    Emergency Contact
+                </label>
+
+                <input
+                    type="tel"
+                    placeholder="Emergency contact"
+                >
+
+
+                <button type="submit">
+                    Register Patient
+                </button>
+
+            </form>
+
+            <button
+                class="close-btn"
+                onclick="closeForms()">
+
+                Close
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= LOGIN ================= -->
+
+    <section id="login" class="form-section hidden">
+
+        <div class="form-box">
+
+            <h2>
+                Login
+            </h2>
+
+            <p>
+                Select your account type
+            </p>
+
+
+            <div class="login-options">
+
+                <button onclick="showPatientLogin()">
+                    👤 Patient
+                </button>
+
+                <button onclick="showDoctorLogin()">
+                    👨‍⚕️ Doctor
+                </button>
+
+                <button onclick="showAdminLogin()">
+                    👨‍💼 Administrator
+                </button>
+
+            </div>
+
+
+            <button
+                class="close-btn"
+                onclick="closeForms()">
+
+                Close
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PATIENT LOGIN ================= -->
+
+    <section id="patient-login" class="form-section hidden">
+
+        <div class="form-box">
+
+            <h2>
+                Patient Login
+            </h2>
+
+            <form onsubmit="patientLogin(event)">
+
+                <label>
+                    Patient ID
+                </label>
+
+                <input
+                    type="number"
+                    placeholder="Enter Patient ID"
+                    required
+                >
+
+                <button type="submit">
+                    Login
+                </button>
+
+            </form>
+
+            <button
+                class="close-btn"
+                onclick="closeForms()">
+
+                Close
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DOCTOR LOGIN ================= -->
+
+    <section id="doctor-login" class="form-section hidden">
+
+        <div class="form-box">
+
+            <h2>
+                Doctor Login
+            </h2>
+
+            <form onsubmit="doctorLogin(event)">
+
+                <label>
+                    Doctor ID
+                </label>
+
+                <input
+                    type="number"
+                    placeholder="Enter Doctor ID"
+                    required
+                >
+
+                <button type="submit">
+                    Login
+                </button>
+
+            </form>
+
+            <button
+                class="close-btn"
+                onclick="closeForms()">
+
+                Close
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ADMIN LOGIN ================= -->
+
+    <section id="admin-login" class="form-section hidden">
+
+        <div class="form-box">
+
+            <h2>
+                Administrator Login
+            </h2>
+
+            <form onsubmit="adminLogin(event)">
+
+                <label>
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="Enter username"
+                    required
+                >
+
+                <label>
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    placeholder="Enter password"
+                    required
+                >
+
+                <button type="submit">
+                    Login
+                </button>
+
+            </form>
+
+            <button
+                class="close-btn"
+                onclick="closeForms()">
+
+                Close
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="contact-section">
+
+        <div>
+
+            <h2>
+                Need Help?
+            </h2>
+
+            <p>
+                Contact City Care Hospital
+            </p>
+
+        </div>
+
+        <div class="contact-details">
+
+            📞 +91 98765 43210
+
+            <br>
+
+            📧 info@citycarehospital.com
+
+            <br>
+
+            📍 Kerala, India
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 City Care Hospital
+        </p>
+
+        <p>
+            Hospital Appointment & Patient Management System
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        function hideAllForms() {
+
+            document
+                .querySelectorAll(".form-section")
+                .forEach(function(section) {
+
+                    section.classList.add("hidden");
+
+                });
+
+        }
+
+
+        function showLogin() {
+
+            hideAllForms();
+
+            document
+                .getElementById("login")
+                .classList.remove("hidden");
+
+            document
+                .getElementById("login")
+                .scrollIntoView();
+
+        }
+
+
+        function showPatientRegistration() {
+
+            hideAllForms();
+
+            document
+                .getElementById("registration")
+                .classList.remove("hidden");
+
+            document
+                .getElementById("registration")
+                .scrollIntoView();
+
+        }
+
+
+        function showPatientLogin() {
+
+            hideAllForms();
+
+            document
+                .getElementById("patient-login")
+                .classList.remove("hidden");
+
+            document
+                .getElementById("patient-login")
+                .scrollIntoView();
+
+        }
+
+
+        function showDoctorLogin() {
+
+            hideAllForms();
+
+            document
+                .getElementById("doctor-login")
+                .classList.remove("hidden");
+
+            document
+                .getElementById("doctor-login")
+                .scrollIntoView();
+
+        }
+
+
+        function showAdminLogin() {
+
+            hideAllForms();
+
+            document
+                .getElementById("admin-login")
+                .classList.remove("hidden");
+
+            document
+                .getElementById("admin-login")
+                .scrollIntoView();
+
+        }
+
+
+        function closeForms() {
+
+            hideAllForms();
+
+        }
+
+
+        function registerPatient(event) {
+
+            event.preventDefault();
+
+            alert(
+                "Patient registration submitted successfully!"
+            );
+
+        }
+
+
+        function patientLogin(event) {
+
+            event.preventDefault();
+
+            alert(
+                "Patient login successful!"
+            );
+
+        }
+
+
+        function doctorLogin(event) {
+
+            event.preventDefault();
+
+            alert(
+                "Doctor login successful!"
+            );
+
+        }
+
+
+        function adminLogin(event) {
+
+            event.preventDefault();
+
+            alert(
+                "Administrator login successful!"
+            );
+
+        }
+
+
+        function bookAppointment() {
+
+            alert(
+                "Please login as a patient to book an appointment."
+            );
+
+        }
+
+    </script>
+
+</body>
+
+</html>
